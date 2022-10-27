@@ -1,7 +1,7 @@
 # my-dots
 Configuration files I use. This will be updated as I improve things. Also, feel free to contribute.
 
-Alternative explanations on [my website](https://wiki.tyghsh.net/linux_configs).
+This repository is a part of the "Configurations" wiki page project on [my website](https://wiki.tyghsh.net/configs).
 
 ## Using
 Clone in your home directory:
