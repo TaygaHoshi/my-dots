@@ -3,10 +3,18 @@ Configuration files I use. This will be updated as I improve things. Also, feel 
 
 Alternative explanations on [my website](https://wiki.tyghsh.net/linux_configs).
 
-To use, clone in your home directory:
+## Using
+Clone in your home directory:
 ```bash
 cd ~
 git clone https://github.com/TaygaHoshi/my-dots.git
+```
+
+## Updating
+Pull the github repository:
+```bash
+cd ~/my-dots
+git pull
 ```
 
 ## bashrc_extend
