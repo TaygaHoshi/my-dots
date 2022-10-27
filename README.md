@@ -27,3 +27,9 @@ The file "bashrc_extend" is configured for the APT package manager. You should c
 ```bash
 "&& snap refresh && flatpak update"
 ```
+
+## uBlock Origin 
+The file "ublock_list.txt" has some useful filters I've collected. To use them:
+1. Go to uBlock Origin settings and click My Filters.  
+2. Click "import and append" and select the ublock_list.txt file. 
+3. As far as I know, this won't duplicate lines since it only imports the difference. 
