@@ -49,3 +49,28 @@ youtube.com###channel-subscription-promo-in-feed
 ! remove watched videos from youtube home
 ! source: https://www.reddit.com/r/uBlockOrigin/comments/pqb9cz/wanted_filter_to_hide_youtube_watched_videos_from/hd9rsko/
 youtube.com##[page-subtype="home"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer)
+
+! source for shorts-block: /g/ 90084364 
+! Blocks shorts on homepage and recommendations 
+www.youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope:has(span:has-text(/Short/i))
+www.youtube.com##ytd-guide-entry-renderer.style-scope:has(span:has-text(/Shorts/i))
+www.youtube.com##endpoint > .ytd-guide-entry-renderer.style-scope:has-text(/Shorts/i)
+www.youtube.com##ytd-compact-video-renderer.ytd-item-section-renderer.style-scope:nth-of-type(3):has-text(/shorts/i)
+
+! source for shorts-block: /g/ 90084364 
+! Removes the "Shorts" Button 
+www.youtube.com##ytd-guide-entry-renderer.ytd-guide-section-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(/shorts/i)
+
+! source for shorts-block: /g/ 90084364 
+! Removes Shorts from Subscription 
+www.youtube.com##ytd-grid-video-renderer.ytd-grid-renderer.style-scope:has-text(/shorts/i)
+
+! Twitter login bypass
+! Source: /g/ 90175464
+twitter.com##[id^="layers"] > [class^="css-"]:has([dir^="auto"]):not(:has([aria-expanded])):has(a[href^="/"]):has-text(/Log in|Sign Up/)
+
+twitter.com##html[dir]:style(overflow: auto !important;)
+
+twitter.com##.r-11nfnuw.r-16wqof.r-1dqxon3.r-16y2uox.r-kemksi.css-1dbjc4n
+
+twitter.com##.r-g6jmlv.r-ipm5af.r-1xcajam.r-xr3zp9.r-1pjcn9w.r-1777fci.r-1pi2tsx.r-18u37iz.r-1kihuf0.r-1awozwy.css-1dbjc4n
