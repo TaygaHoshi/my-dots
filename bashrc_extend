@@ -6,5 +6,7 @@ alias install='sudo apt install'
 alias purge='sudo apt purge'
 alias playlist='mpv --no-video --keep-open=no --shuffle *'
 
+alias pt='sudo powertop'
+alias ht='sudo htop'
 
 export EDITOR='kate'
