@@ -4,7 +4,7 @@ alias ls='ls -l -h --color=auto'
 alias updt='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt clean && sudo apt autoclean'
 alias install='sudo apt install'
 alias purge='sudo apt purge'
-alias playlist='mpv --no-video --keep-open=no --shuffle *'
+alias playlist='mpv --no-video --keep-open=no --shuffle'
 
 alias pt='sudo powertop'
 alias ht='sudo htop'
