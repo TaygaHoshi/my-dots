@@ -1,6 +1,6 @@
 alias tarc='tar -cvzf'
 alias tarx='tar -xvzf'
-alias ls='ls -l -h --color=auto'
+alias ls='ls -l -h --color=auto --group-directories-first'
 alias updt='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt clean && sudo apt autoclean'
 alias install='sudo apt install'
 alias purge='sudo apt purge'
