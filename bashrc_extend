@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias tarc='tar -cvzf'
 alias tarx='tar -xvzf'
 alias ls='ls -l -h --color=auto --group-directories-first'
@@ -5,6 +7,8 @@ alias updt='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo a
 alias install='sudo apt install'
 alias purge='sudo apt purge'
 alias playlist='mpv --no-video --keep-open=no --shuffle'
+alias xo="xdg-open"
+
 
 alias pt='sudo powertop'
 alias ht='sudo htop'
