@@ -9,8 +9,10 @@ alias purge='sudo apt purge'
 alias playlist='mpv --no-video --keep-open=no --shuffle'
 alias xo="xdg-open"
 
-
 alias pt='sudo powertop'
 alias ht='sudo htop'
+
+alias slp='sudo systemctl suspend'
+
 
 export EDITOR='kate'
