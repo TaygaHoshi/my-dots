@@ -7,9 +7,12 @@ alias updt='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo a
 alias install='sudo apt install'
 alias purge='sudo apt purge'
 alias search='apt search'
+
+
+
 alias playlist='mpv --no-video --keep-open=no --shuffle'
 alias xo="xdg-open"
-
+alias convpdf='convert ./* output.pdf'
 
 
 
