@@ -93,3 +93,13 @@ www.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV
 ! 2023-06-22 https://eksisozluk1923.com
 eksisozluk1923.com##.open-subscription-popup
 
+youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
+youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
+youtube.com##+js(set, ytplayer.config.args.raw_player_response.adPlacements, [])
+youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
+
+! 2023-10-26 https://www.4channel.org
+hakurei.cdnbo.org/
+hakurei.cdnbo.org/
+www.4channel.org##.danbo-slot
+
