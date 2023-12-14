@@ -15,8 +15,14 @@ alias fetch='screenfetch'
 alias playlist='mpv --no-video --keep-open=no --shuffle'
 alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
 alias xo="xdg-open"
+
 alias convpdf='convert ./* output.pdf'
 
+function convpng {
+
+	pdftoppm $1 $2 -png
+
+}
 
 
 alias pt='sudo powertop'
