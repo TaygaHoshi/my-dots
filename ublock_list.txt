@@ -75,14 +75,14 @@ twitter.com##.r-11nfnuw.r-16wqof.r-1dqxon3.r-16y2uox.r-kemksi.css-1dbjc4n
 
 twitter.com##.r-g6jmlv.r-ipm5af.r-1xcajam.r-xr3zp9.r-1pjcn9w.r-1777fci.r-1pi2tsx.r-18u37iz.r-1kihuf0.r-1awozwy.css-1dbjc4n
 
-! 2023-06-11 https://eksisozluk1999.com
-eksisozluk1999.com###svg-subscriber-badge > use
-eksisozluk1999.com##.subscriber-badge.eksico
-eksisozluk1999.com###subscriber-badge-entry
-eksisozluk1999.com##.pena-logo-container.link-container.no-hover
+! 2023-06-11 https://eksisozluk111.com
+eksisozluk111.com###svg-subscriber-badge > use
+eksisozluk111.com##.subscriber-badge.eksico
+eksisozluk111.com###subscriber-badge-entry
+eksisozluk111.com##.pena-logo-container.link-container.no-hover
 ||ekstat.com/img/new-logos/eksiseyler-text-logo-dark@2x.png$image
-eksisozluk1999.com##.eksiseyler-logo-container.link-container.no-hover
-eksisozluk1999.com###nav-extra-buttons
+eksisozluk111.com##.eksiseyler-logo-container.link-container.no-hover
+eksisozluk111.com###nav-extra-buttons
 
 ! 2023-06-11 https://www.youtube.com
 www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
@@ -90,8 +90,8 @@ www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
 ! 2023-06-11 https://www.reddit.com
 www.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV
 
-! 2023-06-22 https://eksisozluk1999.com
-eksisozluk1999.com##.open-subscription-popup
+! 2023-06-22 https://eksisozluk111.com
+eksisozluk111.com##.open-subscription-popup
 
 youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
 youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
@@ -103,7 +103,7 @@ hakurei.cdnbo.org/
 hakurei.cdnbo.org/
 www.4channel.org##.danbo-slot
 
-! 2023-12-14 https://eksisozluk1999.com
+! 2023-12-14 https://eksisozluk111.com
 ||eksiseyler.com/sozluk/baslik/5911513?style=dark$subdocument
-eksisozluk1999.com###aside
+eksisozluk111.com###aside
 
