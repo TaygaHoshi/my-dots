@@ -12,6 +12,7 @@ alias fetch='screenfetch'
 
 alias playlist='mpv --no-video --keep-open=no --loop-playlist --shuffle'
 alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
+alias yts='yt-dlp -f bestaudio -x --audio-quality 0'
 alias xo="xdg-open"
 
 alias convpdf='convert ./* output.pdf'
@@ -29,7 +30,6 @@ function convmp3 {
 alias pt='sudo powertop'
 alias ht='sudo htop'
 
-alias slp='systemctl suspend'
 
 
 export EDITOR='nano'
