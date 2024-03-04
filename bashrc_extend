@@ -10,10 +10,9 @@ alias search='apt search'
 
 alias fetch='screenfetch'
 
-
-
-alias playlist='mpv --no-video --keep-open=no --shuffle'
+alias playlist='mpv --no-video --keep-open=no --loop-playlist --shuffle'
 alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
+alias yts='yt-dlp -f bestaudio -x --audio-quality 0'
 alias xo="xdg-open"
 
 alias convpdf='convert ./* output.pdf'
@@ -21,7 +20,10 @@ alias convpdf='convert ./* output.pdf'
 function convpng {
 
 	pdftoppm $1 $2 -png
+}
 
+function convmp3 {
+	for f in *; do ffmpeg -i "$f" -vn "$f.mp3"; done
 }
 
 function webm2gif() {
@@ -34,7 +36,6 @@ function webm2gif() {
 alias pt='sudo powertop'
 alias ht='sudo htop'
 
-alias slp='systemctl suspend'
 
 
-export EDITOR='kate'
+export EDITOR='nano'
