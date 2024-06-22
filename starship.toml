@@ -1,0 +1,6 @@
+format = """$all$directory$character"""
+add_newline = false
+
+
+[aws]
+disabled = true
