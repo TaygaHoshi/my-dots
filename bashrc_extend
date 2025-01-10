@@ -13,7 +13,10 @@ alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
 alias yts='yt-dlp -f bestaudio -x --audio-quality 0'
 alias xo="xdg-open"
 
-alias convpdf='convert ./* output.pdf'
+function convpdf {
+
+	convert ./* "$1.pdf"
+}
 
 function convpng {
 
