@@ -67,7 +67,7 @@ function csvtojson {
 function create-temp-container() {
     # Check if an argument is provided
     if [[ -z "$1" || "$1" == "help" || $# -gt 1 ]]; then
-        echo "Usage: create-temporary-container <debian|alpine|busybox>"
+        echo "Usage: create-temp-container <debian|alpine|busybox>"
         return 1
     fi
 
