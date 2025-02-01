@@ -13,6 +13,11 @@ alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
 alias yts='yt-dlp -f bestaudio -x --audio-quality 0'
 alias xo="xdg-open"
 
+alias pt='sudo powertop'
+alias ht='sudo htop'
+
+export EDITOR='nano'
+
 function convpdf {
 
 	convert ./* "$1.pdf"
@@ -27,16 +32,79 @@ function convmp3 {
 	for f in *; do ffmpeg -i "$f" -vn "$f.mp3"; done
 }
 
-function webm2gif() {
+function webm2gif {
 # https://askubuntu.com/a/1350795
     ffmpeg -y -i "$1" -vf palettegen _tmp_palette.png
     ffmpeg -y -i "$1" -i _tmp_palette.png -filter_complex paletteuse -r 10  "${1%.webm}.gif"
     rm _tmp_palette.png
 }
 
-alias pt='sudo powertop'
-alias ht='sudo htop'
+function csvtojson {
+    if [ $# -eq 0 ]
+    then
+        echo "Function used for converting simple csv/tsv files to json."
+        echo "USAGE: csvtojson filepath separator [-h]";
+        echo "filepath: csv/tsv file"
+        echo "separator: usually comma or tab (use ctrl+v > tab rather than \t)"
+        echo "-h can be added at the end if the first line of the file are headers";
+        return 1;
+    fi
 
 
+    file_content="$(cat "$1")";
+    first_line="$(echo -e "$file_content" | head -n 1)"
+    other_lines="$(echo -e "$file_content" | tail -n+2)"
 
-export EDITOR='nano'
+    if [[ $3 == "-h" ]]
+    then
+        echo -e "$other_lines" | column -t -s "$2" -N "$first_line" -J -n json-output;
+    else
+        headers=$(echo -e "$first_line" | awk -v FS="$2" -v OFS="," '{for (i=1; i<=NF; i++) $i="COL"i} 1')
+        echo -e "$file_content" | column -t -s "$2" -N "$headers" -J -n json-output;
+    fi
+}
+
+function create-temp-container() {
+    # Check if an argument is provided
+    if [[ -z "$1" || "$1" == "help" || $# -gt 1 ]]; then
+        echo "Usage: create-temporary-container <debian|alpine|busybox>"
+        return 1
+    fi
+
+
+    # Set image name and container prefix based on input
+    case "$1" in
+        debian)
+            IMAGE="debian:stable-slim"
+            PREFIX="debian-stable-slim"
+            ;;
+        alpine)
+            IMAGE="alpine:latest"
+            PREFIX="alpine-latest"
+            ;;
+        busybox)
+            IMAGE="busybox:latest"
+            PREFIX="busybox-latest"
+            ;;
+        *)
+            echo "Invalid option. Use one of: debian, alpine, busybox."
+            return 1
+            ;;
+    esac
+
+    # Generate a random number for uniqueness
+    RAND_NUM=$(shuf -i 10000-99999 -n 1)
+    CONTAINER_NAME="${PREFIX}-${RAND_NUM}"
+    HOST_VOLUME_DIR="/tmp/temporary-containers/${CONTAINER_NAME}"
+
+    # Create the host mount directory
+    mkdir -p "$HOST_VOLUME_DIR"
+
+    # Print information
+    echo "Starting container with the name: $CONTAINER_NAME"
+    echo "$HOST_VOLUME_DIR will be mounted to /hostfs in the container"
+
+    # Run the container
+    docker run --rm -it --name "$CONTAINER_NAME" -v "$HOST_VOLUME_DIR":/hostfs:rw "$IMAGE"
+}
+
