@@ -86,6 +86,10 @@ function create-temp-container() {
             IMAGE="busybox:latest"
             PREFIX="busybox-latest"
             ;;
+	nekofirefox)
+	    IMAGE="m1k1o/neko:firefox"
+	    PREFIX="neko-firefox"
+	    ;;
         *)
             echo "Invalid option. Use one of: debian, alpine, busybox."
             return 1

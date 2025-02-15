@@ -105,3 +105,14 @@ www.4channel.org##.danbo-slot
 ||eksiseyler.com/sozluk/baslik/5911513?style=dark$subdocument
 eksisozluk.com###aside
 
+! May 31, 2024 https://leaderboard.isengrim.org
+leaderboard.isengrim.org##div.sadjarl:nth-of-type(1)
+leaderboard.isengrim.org##div.sadjarl:nth-of-type(4)
+
+! Sep 3, 2024 https://www.reddit.com
+www.reddit.com###redesign-beta-optin-btn
+
+! Feb 15, 2025 https://lichess.org
+lichess.org##.lpools.lobby__app__content > div:nth-of-type(1)
+lichess.org##.lpools.lobby__app__content > div:nth-of-type(2)
+lichess.org##.lpools.lobby__app__content > div:nth-of-type(3)
