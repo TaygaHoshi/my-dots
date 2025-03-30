@@ -116,3 +116,11 @@ www.reddit.com###redesign-beta-optin-btn
 lichess.org##.lpools.lobby__app__content > div:nth-of-type(1)
 lichess.org##.lpools.lobby__app__content > div:nth-of-type(2)
 lichess.org##.lpools.lobby__app__content > div:nth-of-type(3)
+
+! from /g/ 104897207
+! Player border radius
+youtube.com###ytd-player.ytd-watch-flexy:style(border-radius: 0px !important)
+youtube.com##ytd-watch-flexy:style(border-radius: 0px !important)
+
+! Thumbnails border radius (like startpage)
+youtube.com###thumbnail:style(border-radius: 0px !important)
