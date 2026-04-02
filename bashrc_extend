@@ -8,7 +8,7 @@ alias ainstall='sudo apt install'
 alias purge='sudo apt purge'
 alias search='apt search'
 
-alias playlist='mpv --no-video --keep-open=no --loop-playlist --shuffle'
+alias playlist='mpv --no-video --keep-open=no --loop-playlist --shuffle --volume=50'
 alias yt='mpv --ytdl-format=bestvideo+bestaudio/best'
 alias yts='yt-dlp -f bestaudio -x --audio-quality 0'
 alias xo="xdg-open"
@@ -110,5 +110,32 @@ function create-temp-container() {
 
     # Run the container
     docker run --rm -it --name "$CONTAINER_NAME" -v "$HOST_VOLUME_DIR":/hostfs:rw "$IMAGE"
+}
+
+function reducevideo() {
+    # copied and adapted from https://stackoverflow.com/a/78054257 by sam2426679
+    # usage: reducevideo source_file_path output_file_path target_video_megabytes target_audio_megabytes
+
+    # Input Values
+    source_file_path=$1
+    output_file_path=$2
+
+    target_video_megabytes=$3
+    target_audio_megabytes=$4
+
+
+    # Bitrate Calculations
+    source_duration_seconds=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$source_file_path")
+
+    target_video_bitrate=$(echo "$target_video_megabytes * 8388.608 / $source_duration_seconds" | bc)
+    target_video_bitrate="${target_video_bitrate%.*}k"
+
+    target_audio_bitrate=$(echo "$target_audio_megabytes * 8388.608 / $source_duration_seconds" | bc)
+    target_audio_bitrate="${target_audio_bitrate%.*}k"
+
+    # Encoding
+    ffmpeg -y -i "$source_file_path" -c:v libx265 -preset medium -b:v "$target_video_bitrate" -pass 1 -c:a aac -b:a "$target_audio_bitrate" -f mp4 /dev/null && \
+    ffmpeg -i "$source_file_path" -c:v libx265 -preset medium -b:v "$target_video_bitrate" -pass 2 -c:a aac -b:a "$target_audio_bitrate" "$output_file_path"
+    rm -f ffmpeg2pass-0.log ffmpeg2pass-0.log.mbtree
 }
 
